@@ -1,0 +1,15 @@
+<h1>Obtenir des informations sur des cryptos</h1>
+
+<form method="POST">
+    {% csrf_token %} {# Pour sécuriser l'entrée d'information #}
+    {% for field in form %}
+         <div>{{field.label}}</div>
+         <div>{{field}}</div>
+    {% endfor %}
+
+    <div>
+        <input type="submit" value="entrer"> 
+    </div>
+
+    
+</form>
